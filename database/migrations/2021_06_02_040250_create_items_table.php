@@ -18,7 +18,7 @@ class CreateItemsTable extends Migration
             $table->string('product_name');
             $table->string('brand');
             $table->string('code');
-            $table->integer('price');
+            $table->string('price');
             $table->string('description');
             $table->timestamps();
         });

@@ -18,5 +18,5 @@ password = 123123
 ```
 ## postman collection
 ```
-https://www.getpostman.com/collections/c5fc39c1515a8646eb42
+https://www.getpostman.com/collections/2b8d311dd581496a2120
 ```
