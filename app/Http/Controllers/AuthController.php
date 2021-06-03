@@ -10,6 +10,12 @@ class AuthController extends Controller
 {
     public function registerCashier(Request $request) {
             // dd($request->all());
+            $request-> validate([
+                'name' => 'required',
+                'user_name' => 'required|unique:users',
+                'email' => 'required|unique:users',
+                'password' => 'required'
+            ]);
 
             $record = [
                 'name' => $request->get('name'),
@@ -27,8 +33,8 @@ class AuthController extends Controller
     public function logInUser(Request $request) {
             // dd($request->all());
             $request-> validate([
-                'user_name' => ['required'],
-                'password' => ['required']
+                'user_name' => 'required',
+                'password' => 'required'
             ]);
 
             $user = User::where('user_name', $request->get('user_name'))-> first();
